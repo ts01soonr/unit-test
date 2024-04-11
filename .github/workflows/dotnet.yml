@@ -16,7 +16,8 @@ jobs:
       SOLUTION: 'Solution1/UnitTest.sln'
 
     runs-on: ubuntu-latest
-
+    permissions:
+      issues: write
     steps:
     - uses: actions/checkout@v2
 
