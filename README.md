@@ -36,8 +36,9 @@ https://sjramblings.io/github-actions-resource-not-accessible-by-integration
       actions: write
       checks: write
       
-# Rest API Example via using System.Net.Http
+# Rest API Example 
 
-  using System.Net.Http;
-  using System.Net.Http.Headers;
+  using System.Net.Http
+  using System.Net.Http.Headers
+  
 
