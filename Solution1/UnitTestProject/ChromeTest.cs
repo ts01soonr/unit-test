@@ -28,6 +28,18 @@ namespace UnitTestProject
             driver.Quit();
         }
 
-       
+        [Test]
+        public void goWish()
+        {
+            var chromeOptions = new ChromeOptions();
+            //chromeOptions.AddArguments("headless");
+            var driver = new ChromeDriver(chromeOptions);
+            Console.WriteLine("start2");
+            driver.Navigate().GoToUrl("https://onskeskyen.dk/da");
+            Console.WriteLine(driver.Title);
+            driver.FindElement(By.Name("username")).SendKeys("fang");
+            driver.Quit();
+        }
+
     }
 }
