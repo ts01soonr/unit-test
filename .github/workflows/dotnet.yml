@@ -20,7 +20,7 @@ jobs:
       BUILD_CONFIG: 'Release'
       SOLUTION: 'Solution1/UnitTest.sln'
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     permissions:
       issues: write
       contents: write
@@ -34,6 +34,12 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 6.x
+
+    - name: Setup Chrome-driver
+      uses: nanasess/setup-chromedriver@v2
+      with:
+      # Optional: do not specify to match Chrome's version
+        chromedriver-version: '88.0.4324.96'
 
     - name: Restore dependencies
       run: dotnet restore $SOLUTION
