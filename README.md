@@ -27,3 +27,10 @@ This repository shows an example of dotnet nunit test , repo generation, seleniu
       with:
       # Optional: do not specify to match Chrome's version
         chromedriver-version: '123.0.6312.122'
+# hint-of-deal with errror
+https://sjramblings.io/github-actions-resource-not-accessible-by-integration
+    permissions:
+      issues: write
+      contents: write
+      actions: write
+      checks: write
