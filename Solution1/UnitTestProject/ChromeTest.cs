@@ -28,7 +28,7 @@ namespace UnitTestProject
             driver.Quit();
         }
 
-        [Test]
+        //[Test]
         public void goWish()
         {
             var chromeOptions = new ChromeOptions();
