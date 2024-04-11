@@ -1,5 +1,6 @@
-# unit-test-github-action
+# Dotnet NUnit-test-github-action
 This repository shows an example of dotnet nunit test , repo generation, selenium setup, test reporter  with github action
+@fang
 
 # Seleinum Chrome Browser and Chrome Driver
 
