@@ -9,8 +9,8 @@ on:
     - main
 
 permissions:
-  contents: read
-  actions: read
+  contents: write
+  actions: write
   checks: write
 
 jobs:
@@ -20,9 +20,13 @@ jobs:
       BUILD_CONFIG: 'Release'
       SOLUTION: 'Solution1/UnitTest.sln'
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
       issues: write
+      contents: write
+      actions: write
+      checks: write
+
     steps:
     - uses: actions/checkout@v2
 
