@@ -1,0 +1,23 @@
+#info-link
+1.skip-ci
+https://docs.github.com/en/actions/managing-workflow-runs/skipping-workflow-runs
+
+2.git cli
+https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add
+
+3.java-github
+
+https://medium.com/@iamfaisalkhatri/how-to-setup-github-actions-for-java-with-maven-project-b6fe394be508
+
+4. chrome-info
+https://googlechromelabs.github.io/chrome-for-testing/#stable
+
+5. hints
+https://ourcloudschool.medium.com/unit-testing-report-with-github-actions-7216f340044e
+
+6. donet cli -tese and result
+
+dotnet test --logger "trx;LogFileName=test-results.trx"
+
+
+
