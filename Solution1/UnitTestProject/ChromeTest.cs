@@ -37,7 +37,7 @@ namespace UnitTestProject
             Console.WriteLine("start2");
             driver.Navigate().GoToUrl("https://onskeskyen.dk/da");
             Console.WriteLine(driver.Title);
-            driver.FindElement(By.Name("username")).SendKeys("fang");
+            //driver.FindElement(By.Name("username")).SendKeys("fang");
             driver.Quit();
         }
 
