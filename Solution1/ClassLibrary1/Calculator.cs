@@ -1,4 +1,4 @@
-﻿namespace ClassLibrary1
+﻿namespace TestLibrary
 {
     public class Calculator
     {

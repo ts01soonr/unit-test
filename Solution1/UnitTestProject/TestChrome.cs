@@ -1,43 +1,48 @@
 using System;
-using ClassLibrary1;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 namespace UnitTestProject
 {
-    public class ChromeTest
+    public class TestChrome
     {
-        Calculator calculator; 
 
         [SetUp]
         public void Setup()
         {
-            calculator = new Calculator();
+            //
+        }
+        [TearDown]
+        public void TearDown()
+        {
+            //
         }
 
         [Test]
-        public void startBrowser()
+        public void goItalle()
         {
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments("headless");
             var driver = new ChromeDriver(chromeOptions);
-            Console.WriteLine("start2");
+            Console.WriteLine("open rw.italle.dk");
             driver.Navigate().GoToUrl("https://rw.italle.dk");
             Console.WriteLine(driver.Title);
             driver.FindElement(By.Name("username")).SendKeys("fang");
+            Assert.AreEqual(driver.Title, "HB System Login");
             driver.Quit();
         }
 
         [Test]
-        public void goWish()
+        public void goSoonr()
         {
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments("headless");
             var driver = new ChromeDriver(chromeOptions);
-            Console.WriteLine("start2");
-            driver.Navigate().GoToUrl("https://onskeskyen.dk/da");
+            Console.WriteLine("open workplace");
+            driver.Navigate().GoToUrl("https://us.workplace.datto.com/login");
             Console.WriteLine(driver.Title);
-            //driver.FindElement(By.Name("username")).SendKeys("fang");
+            driver.FindElement(By.Name("userName")).SendKeys("fang");
+            Assert.AreEqual(driver.Title, "Workplace | Sign In");
             driver.Quit();
         }
 

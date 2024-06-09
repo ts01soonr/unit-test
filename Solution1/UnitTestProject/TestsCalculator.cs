@@ -1,9 +1,9 @@
-using ClassLibrary1;
+using TestLibrary;
 using NUnit.Framework;
 
 namespace UnitTestProject
 {
-    public class Tests
+    public class TestsCalculator
     {
         Calculator calculator; 
 

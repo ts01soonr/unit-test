@@ -35,13 +35,13 @@ jobs:
       uses: browser-actions/setup-chrome@v1
       with:
       # Optional: do not specify to match Chrome's version
-        chrome-version: '123'
+        chrome-version: '125'
 
     - name: Setup Chrome-driver
       uses: nanasess/setup-chromedriver@v2
       with:
       # Optional: do not specify to match Chrome's version
-        chromedriver-version: '123.0.6312.122'
+        chromedriver-version: '125.0.6422.14100'
 
     - name: Restore dependencies
       run: dotnet restore $SOLUTION
