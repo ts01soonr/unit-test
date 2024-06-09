@@ -1,18 +1,16 @@
-# Dotnet NUnit-test-github-action
-This repository shows an example of dotnet nunit test , repo generation, selenium setup, test reporter  with github action
+# Dotnet Unit-Test-github-action
+This repository shows an example of dotnet with github action
+    -nunit test
+    -mstest
+    -chrome browser setup
+    -chrome driver setup
+    -multi-projects
+
 @fang
 
-# Seleinum Chrome Browser and Chrome Driver
-
-# Update Permission for report:
-  permissions:
-      issues: write
-      contents: write
-      actions: write
-      checks: write
-
-"# dotnet unit-report" 
-
+# Enviroment:
+ubuntu-latest, .NET6, Chrome Browser v125 and Chrome Driver v125.0.x
+  
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
@@ -30,7 +28,7 @@ This repository shows an example of dotnet nunit test , repo generation, seleniu
       # Optional: do not specify to match Chrome's version
         chromedriver-version: '125.0.6422.14100'
 
-# Update Permission for report:
+# Update Permission for report (dotnet-trx):
 https://sjramblings.io/github-actions-resource-not-accessible-by-integration
     permissions:
       issues: write
