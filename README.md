@@ -1,12 +1,12 @@
 # Dotnet Unit-Test-github-action
-This repository shows an example of dotnet with github action
+This repository shows an example of dotnet with github action:
+
     -nunit test
     -mstest
     -chrome browser setup
     -chrome driver setup
     -multi-projects
 
-@fang
 
 # Enviroment:
 ubuntu-latest, .NET6, Chrome Browser v125 and Chrome Driver v125.0.x
@@ -29,12 +29,13 @@ ubuntu-latest, .NET6, Chrome Browser v125 and Chrome Driver v125.0.x
         chromedriver-version: '125.0.6422.14100'
 
 # Update Permission for report (dotnet-trx):
-https://sjramblings.io/github-actions-resource-not-accessible-by-integration
+
     permissions:
       issues: write
       contents: write
       actions: write
       checks: write
+    refer: https://sjramblings.io/github-actions-resource-not-accessible-by-integration
       
 # Combine nUnit and MS Test together 
 
@@ -48,3 +49,5 @@ https://sjramblings.io/github-actions-resource-not-accessible-by-integration
     - TestLibrary
     - UnitTestProject
 
+# Test Report
+![App Screenshot](report.png)
