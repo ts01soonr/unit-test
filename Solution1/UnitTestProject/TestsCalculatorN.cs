@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace UnitTestProject
 {
-    public class TestsCalculator
+    public class TestsCalculatorN
     {
         Calculator calculator; 
 
