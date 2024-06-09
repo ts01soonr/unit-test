@@ -10,7 +10,7 @@ on:
 
 
 jobs:
-  build_and_test:
+  Build_and_Test:
 
     env:
       BUILD_CONFIG: 'Release'
@@ -45,9 +45,6 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore $SOLUTION
-
-    - name: Build Project
-      run: dotnet build $SOLUTION --configuration $BUILD_CONFIG
       
     - name: Run Test
       run: dotnet test $SOLUTION --configuration $BUILD_CONFIG --logger "trx;LogFileName=test-results.trx" || true
@@ -60,3 +57,6 @@ jobs:
         path: "**/test-results.trx"                            
         reporter: dotnet-trx
         fail-on-error: true
+
+    - name: Build Project
+      run: dotnet build $SOLUTION --configuration $BUILD_CONFIG

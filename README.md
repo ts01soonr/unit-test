@@ -4,10 +4,12 @@ This repository shows an example of dotnet nunit test , repo generation, seleniu
 
 # Seleinum Chrome Browser and Chrome Driver
 
-# steps:
-  - uses: browser-actions/setup-chrome@v1
-    with:
-      chrome-version: 123
+# Update Permission for report:
+  permissions:
+      issues: write
+      contents: write
+      actions: write
+      checks: write
 
 "# dotnet unit-report" 
 
@@ -20,15 +22,15 @@ This repository shows an example of dotnet nunit test , repo generation, seleniu
       uses: browser-actions/setup-chrome@v1
       with:
       # Optional: do not specify to match Chrome's version
-        chrome-version: '123'
+        chrome-version: '125'
 
     - name: Setup Chrome-driver
       uses: nanasess/setup-chromedriver@v2
       with:
       # Optional: do not specify to match Chrome's version
-        chromedriver-version: '123.0.6312.122'
-# hint-of-deal with errror
+        chromedriver-version: '125.0.6422.14100'
 
+# Update Permission for report:
 https://sjramblings.io/github-actions-resource-not-accessible-by-integration
     permissions:
       issues: write
@@ -36,13 +38,15 @@ https://sjramblings.io/github-actions-resource-not-accessible-by-integration
       actions: write
       checks: write
       
-# Rest API Example 
+# Combine nUnit and MS Test together 
 
-  using System.Net.Http
-  using System.Net.Http.Headers
+    <PackageReference Include="NUnit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.7" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.7" />
 
-# Connect me via linkedin
-
-https://www.linkedin.com/in/zhiyong-fang-8066265/
+# Seperate Test and TestLibrary
   
+    - TestLibrary
+    - UnitTestProject
 
