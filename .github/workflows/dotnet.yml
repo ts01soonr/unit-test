@@ -56,6 +56,7 @@ jobs:
         name: Test Report
         path: "**/test-results.trx"                            
         reporter: dotnet-trx
+        only-summary: 'false'
         fail-on-error: true
 
     - name: Build Project
