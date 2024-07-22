@@ -3,6 +3,7 @@ This repository shows an example of dotnet with github action:
 
     -nunit test
     -mstest
+    -xunit
     -chrome browser setup
     -chrome driver setup
     -multi-projects
@@ -48,6 +49,12 @@ ubuntu-latest, .NET6, Chrome Browser v125 and Chrome Driver v125.0.x
   
     - TestLibrary
     - UnitTestProject
+    - SocketDemo
+    - RestSharpAPI
+    - AppiumTest
 
 # Test Report
-![App Screenshot](report.png)
+![App Screenshot](/img/report.png)
+
+# Socket Channel
+![App Screenshot](/img/socket.png)

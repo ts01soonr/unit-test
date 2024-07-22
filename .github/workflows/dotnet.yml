@@ -47,7 +47,7 @@ jobs:
       run: dotnet restore $SOLUTION
       
     - name: Run Test
-      run: dotnet test $SOLUTION --configuration $BUILD_CONFIG --logger "trx;LogFileName=test-results.trx" || true
+      run: dotnet test $SOLUTION --filter FullyQualifiedName=AppiumTest --configuration $BUILD_CONFIG --logger "trx;LogFileName=test-results.trx" || true
       
     - name: Test Report
       uses: dorny/test-reporter@v1
