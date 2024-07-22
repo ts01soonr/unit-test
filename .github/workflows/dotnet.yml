@@ -79,5 +79,8 @@ jobs:
       with:
         dotnet-version: 6.x
 
+    - name: Restore dependencies
+      run: dotnet restore Solution\UnitTest.sln
+
     - name: Build Project
       run: dotnet build Solution\UnitTest.sln --configuration Release
