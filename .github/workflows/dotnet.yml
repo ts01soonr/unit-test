@@ -14,7 +14,7 @@ jobs:
 
     env:
       BUILD_CONFIG: 'Release'
-      SOLUTION: 'Solution1/UnitTest.sln'
+      SOLUTION: 'Solution/UnitTest.sln'
 
     runs-on: ubuntu-latest
     permissions:
