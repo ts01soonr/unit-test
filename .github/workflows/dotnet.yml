@@ -8,9 +8,8 @@ on:
     branches:
     - main
 
-
 jobs:
-  Build_and_Test:
+  Test:
 
     env:
       BUILD_CONFIG: 'Release'
@@ -58,6 +57,20 @@ jobs:
         reporter: dotnet-trx
         only-summary: 'false'
         fail-on-error: true
+  Build:
 
+    env:
+      BUILD_CONFIG: 'Release'
+      SOLUTION: 'Solution/UnitTest.sln'
+
+    runs-on: windows-latest
+    permissions:
+      issues: write
+      contents: write
+      actions: write
+      checks: write
+
+    steps:
+    - uses: actions/checkout@v2
     - name: Build Project
       run: dotnet build $SOLUTION --configuration $BUILD_CONFIG
