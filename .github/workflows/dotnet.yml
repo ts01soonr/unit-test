@@ -85,11 +85,11 @@ jobs:
         testProject: "Solution/TestPalindrome/" # required
         breakAt: "75" # Optional
 
-    - name: Html-Report
+    - name: Stryker-Html-Report
       uses: actions/upload-artifact@v3
       with:
         name: html-report
-        path: ${{github.workspace}}/Solution/StrykerOutput/**/**/*.html
+        path: ${{github.workspace}}/Solution/TestPalindrome/StrykerOutput/**/**/*.html
 
   Release-Build:
 
