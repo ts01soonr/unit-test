@@ -12,7 +12,7 @@ This repository shows an example of dotnet with github action:
 
 
 # Enviroment:
-ubuntu-latest, .NET6, Chrome Browser v125 and Chrome Driver v125.0.x
+ubuntu-latest, .NET6, Chrome Browser v127 and Chrome Driver v127
   
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
