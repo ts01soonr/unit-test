@@ -58,6 +58,39 @@ jobs:
         only-summary: 'false'
         fail-on-error: true
 
+  Mutation-Testing:
+
+    env:
+      BUILD_CONFIG: 'Release'
+      SOLUTION: 'Solution/UnitTest.sln'
+
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+      actions: write
+      checks: write
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.x
+        
+    - name: stryker-mutator .NET
+      uses: stryker-mutator/github-action@v0.0.1
+      with:
+        testProject: "Solution/TestPalindrome/" # required
+        breakAt: "75" # Optional
+
+    - name: Html-Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: html-report
+        path: ${{github.workspace}}/Solution/StrykerOutput/**/**/*.html
+
   Release-Build:
 
     env:

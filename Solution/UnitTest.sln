@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketDemo", "SocketDemo\So
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore.MySQL", "EntityFrameworkCore.MySQL\EntityFrameworkCore.MySQL.csproj", "{2897BFC4-CEE8-4BA4-94A9-023470652462}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Palindrome", "Palindrome\Palindrome.csproj", "{F7AAC371-BACF-4DE6-994B-49DBFFDA0915}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestPalindrome", "TestPalindrome\TestPalindrome.csproj", "{00BD75DE-F945-417D-8B43-6FE16A0F0BE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{2897BFC4-CEE8-4BA4-94A9-023470652462}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2897BFC4-CEE8-4BA4-94A9-023470652462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2897BFC4-CEE8-4BA4-94A9-023470652462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7AAC371-BACF-4DE6-994B-49DBFFDA0915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7AAC371-BACF-4DE6-994B-49DBFFDA0915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7AAC371-BACF-4DE6-994B-49DBFFDA0915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7AAC371-BACF-4DE6-994B-49DBFFDA0915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00BD75DE-F945-417D-8B43-6FE16A0F0BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00BD75DE-F945-417D-8B43-6FE16A0F0BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00BD75DE-F945-417D-8B43-6FE16A0F0BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00BD75DE-F945-417D-8B43-6FE16A0F0BE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
