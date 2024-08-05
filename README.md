@@ -7,6 +7,8 @@ This repository shows an example of dotnet with github action:
     -chrome browser setup
     -chrome driver setup
     -multi-projects
+	-mutation demo
+	-SwaggerAPI
 
 
 # Enviroment:
@@ -21,13 +23,25 @@ ubuntu-latest, .NET6, Chrome Browser v125 and Chrome Driver v125.0.x
       uses: browser-actions/setup-chrome@v1
       with:
       # Optional: do not specify to match Chrome's version
-        chrome-version: '125'
+        chrome-version: '127'
 
     - name: Setup Chrome-driver
       uses: nanasess/setup-chromedriver@v2
       with:
       # Optional: do not specify to match Chrome's version
-        chromedriver-version: '125.0.6422.14100'
+        chromedriver-version: '127'
+
+    - name: stryker-mutator .NET
+      uses: stryker-mutator/github-action@v0.0.1
+      with:
+        testProject: "Solution/TestPalindrome/" # required
+        breakAt: "75" # Optional
+
+    - name: Stryker-Html-Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: html-report
+        path: ${{github.workspace}}/Solution/TestPalindrome/StrykerOutput/**/**/*.html	
 
 # Update Permission for report (dotnet-trx):
 
@@ -52,6 +66,12 @@ ubuntu-latest, .NET6, Chrome Browser v125 and Chrome Driver v125.0.x
     - SocketDemo
     - RestSharpAPI
     - AppiumTest
+	- Palindrome (Mutation via stryker.Net )
+	- TestPalindrome
+	- EntityFrameworkCore.MySQL
+
+# Mutation Test Report
+![App Screenshot](/img/stryker.Net.png)
 
 # Test Report
 ![App Screenshot](/img/report.png)
